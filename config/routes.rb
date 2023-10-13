@@ -10,12 +10,10 @@ Rails.application.routes.draw do
   get("/movies/:path_id", { :controller => "movies", :action => "show" })
   
   # UPDATE
-  
-  post("/modify_movie/:path_id", { :controller => "movies", :action => "update" })
+  patch("/movies/:path_id", { :controller => "movies", :action => "update" })
   
   # DELETE
-  get("/delete_movie/:path_id", { :controller => "movies", :action => "destroy" })
-
+  delete("/movies/:path_id", { :controller => "movies", :action => "destroy" })
   #------------------------------
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
